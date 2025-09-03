@@ -1,6 +1,5 @@
 # Common MPI program names
 main
-mpi_*
 vector_add
 scatter_gather
 hello_world
