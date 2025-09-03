@@ -1,0 +1,35 @@
+{
+  "name": "inf-3201",
+  "dockerFile": "Dockerfile",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.makefile-tools",
+        "formulahendry.code-runner",
+        "ms-vscode.cmake-tools"
+      ],
+      "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/mpicc",
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+        "C_Cpp.default.includePath": [
+          "/usr/include/mpi"
+        ],
+        "files.associations": {
+          "*.c": "c",
+          "*.h": "c",
+          "mpi.h": "c"
+        },
+        "code-runner.executorMap": {
+          "c": "cd $dir && make clean && make && make run"
+        }
+      }
+    }
+  },
+
+  "remoteUser": "dev",
+  
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace"
+}
